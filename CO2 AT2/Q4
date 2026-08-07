@@ -1,0 +1,23 @@
+words = ["activate", "activation", "reactivation"]
+
+def parse(word):
+    prefix = "-"
+    suffix = "-"
+
+    if word == "activate":
+        return prefix, "activate", suffix, "Base verb", "activate"
+
+    elif word == "activation":
+        return prefix, "activate", "-tion", \
+               "activate → activation", "activate"
+
+    elif word == "reactivation":
+        return "re-", "activate", "-tion", \
+               "activate → activation → reactivation", "activate"
+
+print(f"{'Word':<15}{'Prefix':<10}{'Root':<12}{'Suffix':<10}{'Sequence':<40}{'Normalized'}")
+print("-" * 110)
+
+for w in words:
+    p, r, s, seq, norm = parse(w)
+    print(f"{w:<15}{p:<10}{r:<12}{s:<10}{seq:<40}{norm}")
