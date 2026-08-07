@@ -1,0 +1,27 @@
+words = ["disagree", "agreement", "agreeable"]
+
+def parse(word):
+    prefix = "-"
+    suffix = "-"
+
+    if word.startswith("dis"):
+        prefix = "dis-"
+        root = word[3:]
+        return prefix, root, suffix, "Derivational", "negation", "agree"
+
+    elif word.endswith("ment"):
+        suffix = "-ment"
+        root = word[:-4]
+        return prefix, root, suffix, "Derivational", "state/result", "agree"
+
+    elif word.endswith("able"):
+        suffix = "-able"
+        root = word[:-4]
+        return prefix, root, suffix, "Derivational", "capable/acceptable", "agree"
+
+print(f"{'Word':<12}{'Prefix':<10}{'Root':<10}{'Suffix':<10}{'Type':<15}{'Meaning':<20}{'Normalized'}")
+print("-" * 100)
+
+for w in words:
+    p, r, s, t, m, n = parse(w)
+    print(f"{w:<12}{p:<10}{r:<10}{s:<10}{t:<15}{m:<20}{n}")
