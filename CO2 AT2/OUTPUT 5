@@ -1,0 +1,5 @@
+Word        Suffix    Grammar                    Root      Normalized
+---------------------------------------------------------------------------
+create      -         Base Form                  create    create
+creates     -s        Third-person Singular      create    create
+creating    -ing      Present Participle         create    create
