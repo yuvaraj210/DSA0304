@@ -1,0 +1,5 @@
+Word        Prefix    Root      Suffix    Type           Meaning               Normalized
+----------------------------------------------------------------------------------------------------
+disagree    dis-      agree     -         Derivational   negation              agree
+agreement   -         agree     -ment     Derivational   state/result          agree
+agreeable   -         agree     -able     Derivational   capable/acceptable    agree
