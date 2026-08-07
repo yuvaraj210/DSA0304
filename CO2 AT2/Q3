@@ -1,0 +1,18 @@
+words = ["govern", "government", "governance"]
+
+def normalize(word):
+    if word == "govern":
+        return "govern", "-", "Level 0", "govern"
+
+    elif word.endswith("ment"):
+        return word[:-4], "-ment", "Level 1", "govern"
+
+    elif word.endswith("ance"):
+        return word[:-4], "-ance", "Level 1", "govern"
+
+print(f"{'Word':<12}{'Root':<10}{'Affix':<12}{'Hierarchy':<15}{'Normalized'}")
+print("-" * 70)
+
+for w in words:
+    root, affix, level, norm = normalize(w)
+    print(f"{w:<12}{root:<10}{affix:<12}{level:<15}{norm}")
