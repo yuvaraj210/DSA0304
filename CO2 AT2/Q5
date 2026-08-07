@@ -1,0 +1,20 @@
+words = ["create", "creates", "creating"]
+
+def normalize(word):
+    if word.endswith("ing"):
+        root = word[:-3]
+        if root.endswith("at"):
+            root += "e"
+        return "-ing", "Present Participle", root, "create"
+
+    elif word.endswith("s") and word != "create":
+        return "-s", "Third-person Singular", word[:-1], "create"
+
+    return "-", "Base Form", word, "create"
+
+print(f"{'Word':<12}{'Suffix':<10}{'Grammar':<25}{'Root':<10}{'Normalized'}")
+print("-" * 75)
+
+for w in words:
+    suffix, grammar, root, norm = normalize(w)
+    print(f"{w:<12}{suffix:<10}{grammar:<25}{root:<10}{norm}")
