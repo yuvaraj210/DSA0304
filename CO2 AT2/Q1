@@ -1,0 +1,21 @@
+words = ["analyzing", "analysis", "analytical"]
+
+def parse(word):
+    if word.endswith("ing"):
+        root = word[:-3]
+        if root.endswith("z"):
+            root += "e"
+        return root, "-ing", "Inflectional", "analyze"
+
+    elif word == "analysis":
+        return "analy", "-sis", "Derivational", "analyze"
+
+    elif word == "analytical":
+        return "analysis", "-tic + -al", "Derivational", "analyze"
+
+print(f"{'Word':<12}{'Root':<12}{'Affix':<15}{'Type':<15}{'Normalized'}")
+print("-" * 70)
+
+for w in words:
+    root, affix, typ, norm = parse(w)
+    print(f"{w:<12}{root:<12}{affix:<15}{typ:<15}{norm}")
