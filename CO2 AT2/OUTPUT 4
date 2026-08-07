@@ -1,0 +1,5 @@
+Word           Prefix    Root        Suffix    Sequence                                 Normalized
+--------------------------------------------------------------------------------------------------------------
+activate       -         activate    -         Base verb                                activate
+activation     -         activate    -tion    activate → activation                    activate
+reactivation   re-       activate    -tion    activate → activation → reactivation     activate
