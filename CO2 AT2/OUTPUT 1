@@ -1,0 +1,5 @@
+Word        Root        Affix         Type           Normalized
+----------------------------------------------------------------------
+analyzing   analyze     -ing          Inflectional   analyze
+analysis    analy       -sis          Derivational   analyze
+analytical  analysis    -tic + -al    Derivational   analyzeOUT[
